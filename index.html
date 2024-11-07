@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinescore</title>
+    <link href="indexstyle.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <header>
+        <a class="logout" href="#">log out</a>
+        <img src="Group.png" alt="Cinescore Logo">
+    </header>
+    <div class="search-container">
+        <form action="/search" method="POST" id="searchForm">  <!-- Wrap input and buttons in a form -->
+            <input type="text" class="search-input" id="movie_title" name="movie_title" placeholder="Zoekbalk" required>
+            <div class="button-container">
+                <button class="btn" type="submit">Search</button>  <!-- Add submit button -->
+                <button class="btn" type="button" onclick="alert('Most Popular feature coming soon!')">meest populair</button>
+                <button class="btn" type="button" onclick="alert('Random Film feature coming soon!')">random film</button>
+            </div>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
